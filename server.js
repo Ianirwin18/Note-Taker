@@ -1,23 +1,20 @@
-const express = require('express')
+const express = require("express");
 const app = express();
-const path = require('path')
+const path = require("path");
 
-// Import Routes
-const apiRoutes = require('./routes/apiRoutes')
-const htmlRoutes = require('./routes/htmlRoutes')
+const apiRoutes = require("./routes/apiRoutes");
+const htmlRoutes = require("./routes/htmlRoutes");
 
-// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.static("public"));
 
-// PORT Info
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`))
+app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
 
 app.use("/", apiRoutes);
 app.use("/", htmlRoutes);
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/public/index.html'))
-})
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/index.html"));
+});
