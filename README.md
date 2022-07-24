@@ -14,9 +14,14 @@
 - [License](#license)
 - [Questions](#questions)
 
-# Demo
+# Screenshots
 
-Link to Demo:
+- main page
+  <img src="public/assets/images/mainPage.png">
+- notes
+  <img src="public/assets/images/pageWithNotes.png">
+  \*one of the notes being deleted
+  <img src="public/assets/images/pageWithOneDeleted.png">
 
 ## Description
 
@@ -31,7 +36,7 @@ Build an application that writes and saves notes. This app uses express.js to pr
 ## Usage
 
 - Press '➕' to add a new note
-- Delete previously made notes with the '🗑'
+- Delete previously made notes with the red '🗑'
 - View already made notes on the left column of the page
 
 ## Links

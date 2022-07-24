@@ -1,9 +1,9 @@
+const fs = require("fs");
 const router = require("express").Router();
 const path = require("path");
-const fs = require("fs");
 const uuid = require("../helpers/uuid");
 
-router.get("/notes", (req, res) => {
+router.get("/api/notes", (req, res) => {
   const notesData = fs.readFileSync(
     path.join(process.cwd(), "db/db.json"),
     "utf8"
